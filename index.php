@@ -149,7 +149,7 @@
                             <div class="card-content">
                                 <div class="card-options"> </div>
                                 <span class="card-title">Monitoring </span>
-                                <table id="patient" class="display responsive-table">
+                                <table id="logData" class="display responsive-table">
                                     <thead>
                                         <tr>
                                             <th>No</th>
@@ -204,7 +204,7 @@
         
             $(document).ready(function() {
                 // inisialisasi dataTables
-                $('#patient').DataTable({
+                $('#logData').DataTable({
                     language: {
                         searchPlaceholder: 'Cari Logdata',
                         sSearch: '',
