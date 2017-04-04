@@ -16,36 +16,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
+
         <!-- Title -->
-        <title>Welcome In Admin Dashboard</title>
-        
+        <title>Welcome In Admin Dashboard WSN</title>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
         <meta name="description" content="Responsive Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
         <meta name="author" content="Steelcoders" />
-        
-       
+
+
 		<!-- Styles -->
-       
+
         <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
         <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
         <link href="assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>           
+        <link href="assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <!-- Theme Styles -->
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
         <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-        
+
     </head>
     <body>
         <div class="loader-bg"></div>
@@ -98,15 +98,15 @@
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s4 m4">      
+                        <div class="header-title col s4 m4">
                             <span class="chapter-title">Wireless Sensor Networking (WSN)</span>
                         </div>
-                        
+
                     </div>
                 </nav>
             </header>
-           
-           
+
+
             <aside id="slide-out" class="side-nav white fixed">
                 <div class="side-nav-wrapper">
                     <div class="sidebar-profile">
@@ -122,7 +122,7 @@
                     </div>
                     <div class="sidebar-account-settings">
                         <ul>
-                           
+
                             <li class="no-padding">
                                 <a class="waves-effect waves-grey" href="?q"><i class="material-icons">exit_to_app</i>Sign Out</a>
                             </li>
@@ -130,14 +130,14 @@
                     </div>
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
                     <li class="no-padding active"><a class="waves-effect waves-grey active" href="index.php"><i class="material-icons">settings_input_svideo</i>Dashboard</a></li>
-                   
-                   
+
+
                    <!--  <li class="no-padding"><a class="waves-effect waves-grey" href="charts.html"><i class="material-icons">trending_up</i>Charts</a></li> -->
-                   
+
                 </ul>
                 <div class="footer">
                     <p class="copyright">Wireless Sensor Networking©</p>
-                    
+
                 </div>
                 </div>
             </aside>
@@ -159,7 +159,7 @@
                                             <th>Sensor Gas</th>
                                             <th>Temperatur</th>
                                             <th>Human</th>
-                                            
+
                                         </tr>
                                     </thead>
                                      <tfoot>
@@ -171,14 +171,14 @@
                                             <th>Sensor Gas</th>
                                             <th>Temperatur</th>
                                             <th>Human</th>
-                                            
+
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?PHP
-                                           
+
                                              $user->get_user_data($id);
-                                            
+
                                         ?>
                                     </tbody>
                                 </table>
@@ -189,8 +189,8 @@
             </main>
         </div>
         <div class="left-sidebar-hover"></div>
-        
-        
+
+
        <!-- Javascripts -->
         <script src="assets/plugins/jquery/jquery-2.2.0.min.js"></script>
         <script src="assets/plugins/materialize/js/materialize.min.js"></script>
@@ -200,8 +200,8 @@
         <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
         <script src="assets/js/alpha.min.js"></script>
         <script>
-      
-        
+
+
             $(document).ready(function() {
                 // inisialisasi dataTables
                 $('#patient').DataTable({
@@ -214,7 +214,7 @@
                             sFirst: '<i class="material-icons">chevron_left</i>',
                             sPrevious: '<i class="material-icons">chevron_left</i>',
                             sNext: '<i class="material-icons">chevron_right</i>',
-                            sLast: '<i class="material-icons">chevron_right</i>' 
+                            sLast: '<i class="material-icons">chevron_right</i>'
                         }
                     }
                 });
@@ -222,6 +222,6 @@
             });
 
         </script>
-        
+
     </body>
 </html>
