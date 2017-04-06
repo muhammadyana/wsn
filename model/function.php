@@ -39,8 +39,8 @@
 		}
 
 		/** registration admin DKM**/
-		public function reg_dkm($nama,$email,$token,$hp,$password,$username){
-			$password = md5($password);
+		public function reg_device($name,$username,$email,$passwordLogin){
+			//$password = md5($password);
 			$sql = "SELECT * FROM $this->_table WHERE email='$email' OR username='$username'  ";
 			//check available email or username
 			$check = $this->db->query($sql); //process query into database
@@ -48,7 +48,7 @@
 
 			//if email available then insert into database
 			if ($count_row == 0) {
-				$sql1 = "INSERT INTO $this->_table SET nama='$nama',email='$email',password='$password',no_hp='$hp',username='$username',token='$token' ";
+				$sql1 = "INSERT INTO $this->_table SET name='$name',email='$email',password='$passwordLogin',username='$username' ";
 				$result = $this->db->query($sql1) or die(mysqli_connect_errno(). "Failed Registration");
 				return $result;
 			}else{

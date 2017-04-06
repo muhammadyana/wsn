@@ -8,7 +8,7 @@
     <head>
         
         <!-- Title -->
-        <title>Login Admin Panel</title>
+        <title>Registrasi Device WSN</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
@@ -80,14 +80,14 @@
             </div>
         </div>
         <?PHP
-          if (isset($_REQUEST['login'])) {
+          if (isset($_REQUEST['register'])) {
               extract($_REQUEST);
              // echo $_REQUEST['emailusername'];
-             $login=$user->check_login($username, $passwordLogin);
+             $login=$user->reg_device($name,$username,$email,$passwordLogin);
              if ($login) {
-                 header("location:index.php");
+                echo '<div id="signupSuccess"></div> ';
              }else{ 
-               echo '<div id="notif"></div>';
+               echo '<div id="signupfailed"></div>';
                // echo $emailusername;
                // echo $passwordLogin;
 
@@ -106,6 +106,15 @@
                                        <div class="row">
                                             <form class="col s12" action="<?PHP echo htmlspecialchars($_SERVER["PHP_SELF"]);  ?>" method="POST" >
                                                <div class="input-field col s12">
+                                                   <input id="name" type="text" class="validate text-capitalize" name="name" required="required"/>
+                                                   <label for="name">Full Name</label>
+                                               </div>
+                                               <div class="input-field col s12">
+                                                   <input id="email" type="email" class="validate" name="email" required="required"/>
+                                                   <label for="email">Email</label>
+                                               </div>
+
+                                               <div class="input-field col s12">
                                                    <input id="username" type="text" class="validate" name="username" required="required"/>
                                                    <label for="username">Username</label>
                                                </div>
@@ -114,10 +123,10 @@
                                                    <label for="password">Password</label>
                                                </div>
                                                <div class="col s12 m6 l6">
-                                                   <button name="login" class="waves-effect waves-grey btn orange ">Sign</button>
+                                                   <button name="register" class="waves-effect waves-grey btn orange ">Register Device</button>
                                                </div>
                                                <div class="col s12 m6 l6">
-                                                   <a href="register.php" class="waves-effect waves-grey btn teal ">Register Device</a>
+                                                   <a href="login.php" class="waves-effect waves-grey btn teal ">Sign</a>
                                                </div>
                                                
                                            </form>
@@ -140,8 +149,12 @@
 
         <script type="text/javascript">
           $(document).ready(function(){
-            if ($('#notif').length !==0 ) {
-                $('#notif').html(notie.alert(3, 'Opps..! Username Or Password Wrong. Check again.'));
+         
+            if ($('#signupSuccess').length !==0 ) {
+                $('#signupSuccess').html(notie.alert(1, 'Registration success.! login to enter admin panel' ));
+            }
+            if ($('#signupfailed').length !==0) {
+                $('#signupfailed').html(notie.alert(2, 'Opps...! Username or email already registered. try another email or username'));
             }
           });
         </script>
